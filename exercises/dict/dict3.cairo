@@ -21,6 +21,10 @@ struct Team {
 impl TeamImpl of TeamTrait {
     fn new() -> Team {
         //TODO : initialize empty team with 0 player
+        Team {
+            level: Default::default(),
+            players_count: 0
+            }
     }
 
     fn get_level(ref self: Team, name: felt252) -> usize {
